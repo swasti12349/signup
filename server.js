@@ -5,6 +5,7 @@ const sql = require('mssql');
 const app = express();
 app.use(cors());
 app.use(express.json());
+const port = process.env.PORT || 3000;
 
 // Azure SQL configurations
 const sqlConfig = {
@@ -96,6 +97,6 @@ app.get('/', (req, res) => {
 });
 
 // Start server
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log('Server started on port 3000');
 });
