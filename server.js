@@ -6,7 +6,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Azure SQL configuration
+// Azure SQL configurations
 const sqlConfig = {
     user: 'pramod',
     password: 'server@123',
