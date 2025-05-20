@@ -12,7 +12,7 @@ const port = process.env.PORT || 3000;
 // JWT Secret Key (should be in env variables in production)
 const JWT_SECRET = 'mySuperSecretKey123';
 
-// Azure SQL configurations
+// Azure SQL configuration
 const sqlConfig = {
     user: 'pramod',
     password: '@Swasti123456',
