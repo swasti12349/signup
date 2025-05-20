@@ -70,7 +70,7 @@ app.post('/signup', async (req, res) => {
 
         const checkResult = await pool.request()
             .input('email', sql.VarChar, email)
-            .query('SELECT * FROM [user2] WHERE email = @email');
+            .query('SELECT * FROM [user] WHERE email = @email');
 
         if (checkResult.recordset.length > 0) {
             return res.status(400).json({ message: 'User already exists' });
@@ -86,7 +86,7 @@ app.post('/signup', async (req, res) => {
             .input('country', sql.VarChar, country)
             .input('dob', sql.Date, dob)
             .query(`
-                INSERT INTO [user2] (firstname, lastname, email, password, address, gender, country, dob)
+                INSERT INTO [user] (firstname, lastname, email, password, address, gender, country, dob)
                 VALUES (@firstname, @lastname, @email, @password, @address, @gender, @country, @dob)
             `);
 
