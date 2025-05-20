@@ -15,9 +15,9 @@ const JWT_SECRET = 'mySuperSecretKey123';
 // Azure SQL configurations
 const sqlConfig = {
     user: 'pramod',
-    password: 'server@123',
-    database: 'mydb',
-    server: 'srlogin.database.windows.net',
+    password: '@Swasti123456',
+    database: 'signupdb',
+    server: 'mysignupserver.database.windows.net',
     pool: {
         max: 10,
         min: 0,
